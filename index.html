@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publikacje elektroniczne – EPUB, MOBI, PDF</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      color: #333;
+    }
+
+    header {
+      position: relative;
+      background: url('header-ebook.jpg') center/cover no-repeat;
+      padding: 6em 2em 2em;
+      text-align: center;
+      color: #fff;
+    }
+
+    header img {
+      max-width: 250px;
+      margin-bottom: 2em;
+    }
+
+    header h1 {
+      font-size: 2em;
+      margin: 0.3em 0;
+    }
+
+    header p {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h1, h2 {
+      color: #cc3366;
+    }
+
+    .cta-button {
+      background: #cc3366;
+      color: white;
+      padding: 0.8em 1.5em;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      margin-top: 2em;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 3em 2em;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .features li {
+      margin-bottom: 1em;
+      list-style: none;
+      padding-left: 1.2em;
+      position: relative;
+    }
+
+    .features li::before {
+      content: "✔";
+      color: green;
+      position: absolute;
+      left: 0;
+    }
+
+    .portfolio {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+    }
+
+    .portfolio .item {
+      flex: 1 1 300px;
+      background: white;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-top: 2em;
+    }
+
+    input, textarea, button {
+      padding: 0.8em;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background: #cc3366;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+      .steps {
+      border-left: 3px solid #cc3366;
+      padding-left: 1em;
+      margin: 2em 0;
+    }
+
+    .step {
+      margin-bottom: 1em;
+      position: relative;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7); 
+      z-index: 0;
+    }
+
+    header * {
+      position: relative;
+      z-index: 1;
+    }
+
+.epub-preview {
+  background: white;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  height: 500px;
+  padding: 2em;
+}
+
+.epub-preview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: white;
+}
+.section-divider {
+  text-align: center;
+  font-size: 1em;
+  margin: 2em 0;
+  color: #cc3366;
+}
+.kontakt-info {
+  background-color: #fbeaf1;
+  padding: 3em 2em;
+  width: 100%;
+  text-align: center;
+}
+
+.kontakt-info h2 {
+  color: #cc3366;
+  margin-bottom: 1em;
+}
+
+.kontakt-info p {
+  font-size: 1.1em;
+  margin: 0.5em 0;
+}
+
+.kontakt-info a {
+  color: #cc3366;
+  text-decoration: none;
+}
+
+.kontakt-info a:hover {
+  text-decoration: underline;
+}
+.social-icons {
+  margin-top: 1.5em;
+}
+
+.social-icons a {
+  margin: 0 0.5em;
+  color: #cc3366;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #333;
+}
+
+
+</style>
+</head>
+<body>
+  <header>
+    <img src="elfa-logo.svg" alt="Logo firmy"/>
+    <h1>EPUB, MOBI, PDF – Publikacje Elektroniczne</h1>
+    <p>Profesjonalne e-booki i katalogi gotowe do publikacji na każdej platformie i czytniku.</p>
+    <a href="#kontakt" class="cta-button">Zamów e-booka</a>
+  </header>
+
+  <section>
+    <div class="section-divider">★ ★ ★</div>
+    <h2>Kompleksowe przygotowanie e-booków — co zawiera?</h2>
+    <ul class="features">
+      <li>Format EPUB 3 – zgodność ze specyfikacją EPUB</li>
+      <li>MOBI dla Kindle – zgodność z Amazon KDP</li>
+      <li>PDF gotowy do druku lub dystrybucji online</li>
+      <li>Poprawność składni HTML, CSS, SVG</li>
+      <li>Osadzone czcionki i styl dopasowany do treści</li>
+      <li>Interaktywny spis treści i przypisy</li>
+      <li>Obecność wymaganych metadanych</li>
+      <li>Pomoc w publikacji lub dostarczeniu gotowego pliku</li>
+      <li>Gotowość do publikacji w Amazon, Publio, Empik Go</li>
+    </ul>
+  </section>
+
+  <!--<section>
+    <h2>Przykładowe realizacje</h2>
+    <div class="portfolio">
+      <div class="item">
+        <img src="epub-okladka.jpg" alt="Okładka EPUB" />
+        <p><a href="#">Zobacz plik EPUB</a></p>
+      </div>
+      <div class="item">
+        <img src="pdf-podglad.jpg" alt="Zrzut PDF" />
+        <p><a href="#">Pobierz PDF</a></p>
+      </div>
+    </div>
+  </section>-->
+
+  <section>
+  <div class="section-divider">★ ★ ★</div>
+  <h2>Jak wygląda e-book na czytniku?</h2>
+  <div class="epub-preview">
+    <iframe src="epub-preview.html" title="Podgląd EPUB" loading="lazy"></iframe>
+  </div>
+</section>
+
+  <section>
+    <div class="section-divider">★ ★ ★</div>
+    <h2>Jak to działa?</h2>
+    <div class="steps">
+      <div class="step">Przesyłasz treść (Word, Markdown, InDesign, PDF)</div>
+      <div class="step">Otrzymujesz darmową wycenę</div>
+      <div class="step">Po akceptacji – tworzę pliki EPUB / MOBI / PDF</div>
+      <div class="step">Gotowy e-book otrzymujesz w kilka dni</div>
+    </div>
+  
+  <section id="kontakt" class="kontakt-info">
+  <div class="section-divider">★ ★ ★</div>
+  <h2>Skontaktuj się ze mną</h2>
+  <p><strong>Telefon:</strong> <a href="tel:+48513090196">513 090 196</a></p>
+  <p><strong>E-mail:</strong> <a href="mailto:aneta.jagla@elfapublikacje.com">aneta.jagla@elfapublikacje.com</a></p>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com/profile.php?id=100089374577169&locale=pl_PL" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook fa-2x"></i>
+    </a>
+    <a href="https://www.instagram.com/elfapublikacje" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram fa-2x"></i>
+    </a>
+  </div>
+</section>
+
+</body>
+</html>

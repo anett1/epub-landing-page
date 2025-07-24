@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Podgląd e-booka</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+/* Ustawienia bazowe dla całego dokumentu */
+body {
+  font-family: 'Merriweather', serif;         /* Krój pisma – domyślny, czytelny, literacki */
+  line-height: 1.6;            /* Interlinia dla lepszej czytelności */
+  margin: 0;
+  padding: 0;
+  widows: 2;                   /* Unikaj samotnych ostatnich wierszy na nowej stronie */
+  orphans: 2;                  /* Unikaj samotnych pierwszych wierszy na końcu strony */
+}
+
+/* ========== AKAPITY ========== */
+
+p {
+  display: block;              /* Wyraźnie ustawiamy akapit jako blokowy (domyślnie tak jest, ale robimy to jawnie) */
+  text-indent: 1.2em;          /* Wcięcie pierwszego wiersza akapitu */
+  margin: 0;                  /* Odstęp tylko na dole akapitu */
+  text-align: justify;
+}
+
+/* ========== NAGŁÓWKI ========== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;     /* Nagłówki nowoczesne – kontrast z tekstem */
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  page-break-after: avoid;     /* Unikaj łamania strony tuż po nagłówku */
+  text-align: left;
+}
+
+/* Rozmiary nagłówków względne (skalują się z ustawieniami czytnika) */
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.3em; }
+h4 { font-size: 1.1em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.9em; }
+
+/* ========== CYTATY BLOKOWE ========== */
+
+blockquote {
+  margin-left: 2em;
+  margin-right: 2em;
+  font-style: italic;
+  font-size: 0.95em;
+}
+
+/* ========== WYRÓŻNIENIA ========== */
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+
+
+/* ========== OBRAZY ========== */
+
+img {
+  display: block;              /* Obraz jako blok – nie obok tekstu */
+  max-width: 100%;             /* Nigdy nie wykracza poza szerokość ekranu */
+  height: auto;                /* Proporcjonalne skalowanie */
+  margin: 1em auto;            /* Wyśrodkowanie + odstęp */
+}
+
+img.with{
+  max-width: 50%;            /* 50% szerokości ekranu */
+}
+.figure {
+  text-align: center;        /*formatowanie podpisdu pod ilutracją*/
+  margin: 1em auto;
+}
+div.figure p {
+  font-size: 0.8em;
+  text-align: center;        /*formatowanie podpisdu pod ilutracją*/
+  margin: 1.5em auto;
+}
+
+/*========== formatowanie tytułów rozdziałów========== */
+
+.chapter-label {
+  font-size: 0.5em;
+  font-weight: normal;
+   text-transform: uppercase;
+   letter-spacing: 0.2em;
+}
+
+.chapter-title {
+  font-size: 1.6em;
+}
+
+/*========== formatuj przypisy ========== */
+
+a.footnote-ref {
+  font-size: 1em;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-weight: normal;
+  line-height: 1;
+}
+
+a.footnote-back{
+  font-size: 0.8em;
+  text-decoration: none;
+  margin-left: 0.3em;
+}
+.footnotes ol {
+  margin-left: 1.5em;     /* lub 0 jeśli chcesz wyrównanie do lewej */
+  padding-left: 0;
+}
+
+.footnotes li {
+  text-indent: 0;
+  margin-bottom: 0.8em;
+}
+
+.footnotes p {
+  font-size: 0.9em;
+  text-indent: 0;         /* lub np. 1.5em jeśli chcesz klasyczne wcięcie */
+  margin: 0;
+}
+
+/* Opcjonalnie wyrównanie, np. do góry – rzadko potrzebne w przypisach inline */
+a[epub|type="noteref"]::before {
+  text-align: right;
+}
+
+/* ========== PRZERYWNIKI SCEN (Gwiazdki) ========== */
+
+hr {
+  border: none;
+  text-align: center;
+  margin: 2em 0;
+}
+
+hr::before {
+  content: "***";             /* Zamieniamy linię na ozdobny znak */
+  letter-spacing: 0.3em;
+}
+
+/* ========== KLASA: WYŚRODKOWANIE ========== */
+
+.centered {
+  text-align: center;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+
+  </style>
+</head>
+<body>
+  <h1 id="rozdział-pierwszy-puddley"><span class="chapter-label">Rozdział
+pierwszy</span><br /><span class="chapter-title">Puddley</span></h1>
+<p>Dawno, dawno temu — kiedy nasi dziadkowie byli jeszcze zupełnie mali
+— żył sobie pewien doktor. Nazywał się Dolittle — a konkretnie dr med.
+John Dolittle, gdzie „dr med.” oznacza, że był doktorem medycyny
+z prawdziwego zdarzenia i wiedział całe mnóstwo różnych rzeczy.</p>
+<p>Żył w Puddleby, niewielkim miasteczku położonym nad rzeką Marsh.
+Wszyscy tamtejsi mieszkańcy, młodzi czy starzy, znali go z widzenia.
+I zawsze, gdy przechadzał się ulicami w swoim cylindrze<a href="#fn1"
+class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>,
+powtarzali: „Spójrzcie, idzie Doktor! Ten to ma łeb!”. Psy i dzieci
+podbiegały, żeby chodzić za nim krok w krok i nawet wrony, które
+mieszkały na wieży kościelnej, krakały z uznaniem na jego widok
+i grzecznie skłaniały głowy.</p>
+<p>Dom Doktora, położony na obrzeżach mieściny, był raczej niewielki,
+otaczał go jednak rozległy ogród z trawnikiem, na którym — w cieniu
+wierzb płaczących — stały kamienne ławy. Domem zajmowała się siostra
+Doktora, Sara Dolittle, ale ogród pielęgnował zawsze on sam.</p>
+<p>Bardzo lubił zwierzęta i miał ich wiele. W stawie, położonym na
+obrzeżach posesji<a href="#fn2" class="footnote-ref" id="fnref2"
+role="doc-noteref"><sup>2</sup></a>, hodował złote rybki, w spiżarni<a
+href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a> trzymał króliki, w pianinie białe
+myszki, w bieliźniarce<a href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a> wiewiórkę, a w piwnicy jeża. Miał
+też krowę z cielaczkiem i starego, kulawego konia, któremu stuknęły już
+22 lata. A do tego kury, gołębie, dwa jagniątka i wiele innych zwierząt,
+ale najbardziej z nich wszystkich lubił kaczkę Dab-Dab, psa Dżipa,
+prosiaczka Gub-Gub, papugę Polinezję i sowę Tu-Tu.</p>
+<div class="figure">
+<p><img src="ilustracja-1.png" class="with"
+alt="ilustracja - doktor na spacerze" /> <em>Rysunek 1. Doktor Dolittle
+na spacerze.</em></p>
+</div>
+<p>Siostra Doktora często narzekała, że przez te wszystkie zwierzaki
+w domu zawsze jest brudno. Co gorsza, zdarzyło się, że pewna starsza
+pani z reumatyzmem<a href="#fn5" class="footnote-ref" id="fnref5"
+role="doc-noteref"><sup>5</sup></a>, pacjentka Doktora, podczas wizyty
+przypadkiem usiadła na jeżu, który spał akurat na kanapie, i więcej już
+nie przyszła. Od tego czasu co sobotę jeździła do położonego o całe 15
+kilometrów dalej miasteczka Oxenthorpe, do zupełnie innego lekarza.</p>
+<p>Pewnego dnia siostra Doktora, Sara Dolittle, przyszła do niego
+i powiedziała:</p>
+<p>— Johnie, czy naprawdę uważasz, że chorzy ludzie powinni przychodzić
+do domu pełnego zwierząt? Żaden szanujący się lekarz nie trzymałby
+w salonie stada jeży i myszy! Zwierzaki odstraszyły już czworo klientów!
+Dziedzic Jenkins oraz wielebny pastor mówią, że ich stopa więcej w tym
+domu nie postanie, choćby nawet mieli kopnąć w kalendarz! Biedniejemy
+z dnia na dzień. Jeśli tak dalej pójdzie, nikt ze śmietanki towarzyskiej
+nie zechce się u ciebie leczyć!</p>
+<p>— Kiedy ja wolę zwierzęta od ludzi ze śmietanki — powiedział
+Doktor.</p>
+<p>— Bzdury! — fuknęła jego siostra i wypadła z pokoju.</p>
+<p>Czas mijał. Doktorowi wciąż przybywało zwierząt, a ubywało pacjentów.
+W końcu przychodził do niego już tylko Sprzedawca Mięsa dla Kotów,
+któremu zwierzaki w ogóle nie przeszkadzały. Tyle że Sprzedawca zwykle
+nie miał grosza przy duszy, a chorował tylko raz do roku — na Boże
+Narodzenie, kiedy płacił Doktorowi sześć pensów za flaszeczkę
+lekarstwa.</p>
+<p>Trzeba wam wiedzieć, że nawet w owych czasach (dawno, dawno temu!)
+sześć pensów nie wystarczyło na życie, więc całe szczęście, że Doktor
+miał jeszcze co nieco w skarbonce! Ale kolejne zwierzęta, które wciąż
+przygarniał, trzeba było przecież karmić. Oszczędności topniały
+w oczach.</p>
+<p>W końcu sprzedał swoje pianino, a myszom urządził przeprowadzkę do
+sekretarzyka, ale pieniądze, które w ten sposób zdobył, również nie
+starczyły na długo. Ostatecznie musiał pozbyć się nawet brązowego,
+odświętnego garnituru i tak, krok po kroku, biedniał coraz bardziej.</p>
+<p>Teraz, gdy przechadzał się ulicami w swoim cylindrze, ludzie mówili
+do siebie: „Spójrzcie, idzie John Dolittle, doktor medycyny! Swego czasu
+był najsłynniejszym lekarzem w tej części kraju, a teraz? Co za widok!
+Nosi dziurawe skarpety i jest biedny jak mysz kościelna!”</p>
+<p>Ale psy, koty i dzieci wciąż przybiegały, żeby chodzić za nim po
+mieście krok w krok, tak samo, jak kiedy był bogaty.</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p><strong>cylinder</strong> (z gr. kylindros: walec) —
+<em>rodzaj wysokiego, sztywnego kapelusza z główką w kształcie walca
+i wąskim rondem, popularny wśród zamożniejszych warstw ludności Europy
+w XIX i na pocz. XX w.</em><a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><strong>posesja</strong> — <em>posiadłość; wydzielony
+teren stanowiący czyjąś własność, wraz z budynkami na nim
+stojącymi.</em><a href="#fnref2" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p><strong>spiżarnia</strong> — <em>pomieszczenie w domu
+służące do przechowywania zapasów żywności.</em><a href="#fnref3"
+class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p><strong>bieliźniarka</strong> — <em>szafka na bieliznę
+pościelową i stołową (pościel, obrusy, serwetki, poszewki itp.).</em><a
+href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p><strong>reumatyzm</strong> — <em>choroba narządów ruchu
+powodująca bóle oraz zwyrodnienia i zniekształcenia stawów.</em><a
+href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>
